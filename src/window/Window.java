@@ -2,6 +2,9 @@ package window;
 
 import javax.swing.JFrame;
 import javax.swing.plaf.DimensionUIResource;
+import java.awt.Container;
+
+import window.FileExplorer;
 
 public class Window {
     int WIDTH = 500;
@@ -10,6 +13,27 @@ public class Window {
     
     public Window() {
         JFrame win_frame = new JFrame();
+
+        Container contentPane = win_frame.getContentPane();
+        FileExplorer node = new FileExplorer(contentPane);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         win_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
