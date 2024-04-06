@@ -1,10 +1,14 @@
 package window;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import javax.swing.plaf.DimensionUIResource;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.Container;
 
 import window.FileExplorer;
+import window.Menu;
 
 public class Window {
     int WIDTH = 500;
@@ -14,25 +18,15 @@ public class Window {
     public Window() {
         JFrame win_frame = new JFrame();
 
-        Container contentPane = win_frame.getContentPane();
-        FileExplorer node = new FileExplorer(contentPane);
+        Menu winMenu = new Menu(win_frame); 
 
+        JPanel filesPanel = new JPanel(new FlowLayout());
+
+        FileExplorer exp = new FileExplorer(filesPanel);
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        filesPanel.add(exp);
+        
+        win_frame.add(filesPanel);
 
 
         win_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
