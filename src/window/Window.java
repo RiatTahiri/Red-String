@@ -5,6 +5,8 @@ import javax.swing.plaf.DimensionUIResource;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.io.IOError;
+import java.io.IOException;
 import java.awt.Container;
 
 import window.FileExplorer;
@@ -15,7 +17,7 @@ public class Window {
     int HEIGHT = 500;
     String TITLE = "Red String";
     
-    public Window() {
+    public Window() throws IOException {
         JFrame win_frame = new JFrame();
 
         Menu winMenu = new Menu(win_frame); 
